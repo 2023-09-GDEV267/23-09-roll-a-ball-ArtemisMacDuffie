@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PlayerController : MonoBehaviour
@@ -47,6 +48,10 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
+        }
+        if (other.gameObject.CompareTag("KillZone"))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }

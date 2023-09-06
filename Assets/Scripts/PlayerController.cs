@@ -32,8 +32,8 @@ public class PlayerController : MonoBehaviour
     }
 
     void SetCountText() {
-        countText.text = "Count: " + count.ToString();
-        if (count >= 12) {
+        countText.text = "Count: " + count.ToString() + " of 36";
+        if (count >= 36) {
             winTextObject.SetActive(true);
         }
     }
